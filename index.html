@@ -10,12 +10,12 @@
 <body>
     <div id="main">
         <div id="header">
-            <img src="" alt="Main Logo">
+            <img src="bookshelf.svg" alt="Main Logo" id="main-logo">
             <div id="header-title">Nicks Library</div>
         </div>
         <div id="sidebar">
             <div id="form-header">Add a Book:</div>
-            <form action="">
+            <form action="" id="add-form">
                 <div class="form-item">
                     <label class = "form-label" for="title-input">Title</label>
                     <input type="text" class="form-input" id="title-input" required>
@@ -37,14 +37,14 @@
         <div id="content">
             <div class="book-card">
                 <div class="info-container">
-                    <h5 class="title-label">Title:</h5><div class="title">Book Title</div>
-                    <h5 class="author-label">Author:</h5><div class="title">Book Author</div>
-                    <h5 class="pages-label">Pages:</h5><div class="title">Book Pages</div>
-                    <h5 class="read-label">Read:</h5><div class="title">Book Read</div>
+                    <div class="card-row"><span class="card-label">Title:</span><span class="title">Book Title</span></div>
+                    <div class="card-row"><span class="card-label">Author:</span><span class="title">Book Author</span></div>
+                    <div class="card-row"><span class="card-label">Pages:</span><span class="title">Book Pages</span></div>
+                    <div class="card-row"><span class="card-label">Read:</span><span class="title">Book Read</span></div>
                 </div>
                 <div class="action-bar">
-                    <div class="mark-read-button"></div>
-                    <img src="" alt="Delete Button">
+                    <button class="mark-read-button">Mark As Read</button>
+                    <img src="trash-can-outline.svg" alt="Delete Button" class="icon-delete">
                 </div>
 
             </div>

@@ -1,5 +1,107 @@
 *{
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #403D58;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: clamp(100px,20%,500px) 1fr;
+    grid-template-rows: clamp(100px, 20%, 300px) 1fr;
+    grid-template-areas: 
+            "header header"
+            "sidebar content";
+}
+
+#header{
+    grid-area: header;
+    background-color: #66D7D1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#header-title{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+#main-logo{
+    margin-left: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+
+#sidebar{
+    grid-area: sidebar;
+    background-color: #DBD56E;
+    padding: 10px;
+}
+
+#content{
+    grid-area: content;
+    background-color: #F2EFEA;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-card{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: solid #403D58 3px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 6px 3px 0px rgba(0,0,0,0.74);
+}
+.card-row{
+    margin-top: 10px;
+}
+
+.card-label{
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.action-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-delete{
+    width: 30px;
+    height: 30px;
+}
+
+
+#form-header{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.form-item{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.form-label{
+    width: 70px;
+}
+
+.form-input{
+    margin-left: 10px;
+    width: 100%;
 }
 
