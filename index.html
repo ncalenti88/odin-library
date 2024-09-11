@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="library.js"></script>
+    <title>Nicks Library</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <img src="" alt="Main Logo">
+            <div id="header-title">Nicks Library</div>
+        </div>
+        <div id="sidebar">
+            <div id="form-header">Add a Book:</div>
+            <form action="">
+                <div class="form-item">
+                    <label class = "form-label" for="title-input">Title</label>
+                    <input type="text" class="form-input" id="title-input" required>
+                </div>
+                <div class="form-item">
+                    <label class = "form-label" for="author-input">Author</label>
+                    <input type="text" class="form-input" id="author-input" required>
+                </div>
+                <div class="form-item">
+                    <label class = "form-label" for="pages-input">Pages</label>
+                    <input type="text" class="form-input" id="pages-input" required>
+                </div>
+                <div class="form-item">
+                    <button>Add Book</button>
+                </div>
+            </form>
+
+        </div>
+        <div id="content">
+            <div class="book-card">
+                <div class="info-container">
+                    <h5 class="title-label">Title:</h5><div class="title">Book Title</div>
+                    <h5 class="author-label">Author:</h5><div class="title">Book Author</div>
+                    <h5 class="pages-label">Pages:</h5><div class="title">Book Pages</div>
+                    <h5 class="read-label">Read:</h5><div class="title">Book Read</div>
+                </div>
+                <div class="action-bar">
+                    <div class="mark-read-button"></div>
+                    <img src="" alt="Delete Button">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
