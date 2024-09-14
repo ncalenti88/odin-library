@@ -133,6 +133,23 @@ function addBook(book,id,place){
 
 }
 
+let form = document.getElementById('add-form')
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const b1 = new Book(document.getElementById('title-input').value,
+    document.getElementById('author-input').value, document.getElementById('pages-input').value, false)
+
+    addBookToLibrary(b1, myLibrary)
+
+
+    addBook(b1,myLibrary.length-1, bookArea)
+    form.reset()
+
+    
+
+
+})
+
 
 
 for(const [index, book] of myLibrary.entries()){
