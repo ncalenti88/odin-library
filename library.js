@@ -27,6 +27,19 @@ function removeBook(id) {
 }
 
 
+function toggleRead(book , id){
+    book.read = !book.read
+    const button = document.querySelector(`[data-id="${id}"] > .action-bar > button`)
+    const field = document.querySelector(`[data-id="${id}"] > .info-container > .card-row > .read`)
+
+    button.textContent = book.read ? "Mark As Un-Read":"Mark As Read"
+
+    field.textContent = book.read
+    
+}
+
+
+
 function addBook(book,id,place){
 
     const bookCard = document.createElement("div")
@@ -73,6 +86,7 @@ function addBook(book,id,place){
     data3.textContent = book.pages
     const data4 = document.createElement("span")
     data4.classList.add("title")
+    data4.classList.add("read")
     data4.textContent = book.read
 
     cardRow1.appendChild(cardlabel1)
@@ -99,7 +113,7 @@ function addBook(book,id,place){
 
     const button = document.createElement("button")
     button.classList.add("mark-read-button")
-    button.textContent = "Mark As Read"
+    button.textContent = book.read ? "Mark As Un-Read":"Mark As Read"
 
     const trash = document.createElement("img")
     trash.classList.add("icon-delete")
@@ -110,6 +124,8 @@ function addBook(book,id,place){
     actionBar.appendChild(trash)
 
     trash.addEventListener("click", () => {removeBook(id)})
+
+    button.addEventListener("click", () => {toggleRead(book, id)})
 
     place.appendChild(bookCard)
 
